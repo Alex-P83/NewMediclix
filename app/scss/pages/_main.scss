@@ -49,39 +49,139 @@
 }
 
 .main_menu {
+  margin-top: -60px;
   .menu {
     background: linear-gradient(90.93deg, #3c9326 -2.03%, #6dc433 100%);
     border-radius: 20px;
+    position: relative;
+    z-index: 2;
     ul {
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 43px 0;
+      padding: 0;
       li {
         width: calc(100%/8);
-        height: 112px;
-        border-right:1px solid color(white,primary);
         list-style: none;
-        &:last-child{
-            border: none;
-        }
-        a {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-direction: column;
-          svg {
-            use {
-              fill: color(white, primary);
+        padding: 43px 0;
+        &.active{
+          transform: scale(1.02,1.1);
+          background: color(white,primary);
+          border-radius: 20px;
+          @include box_shadow(1);
+          .menu_item{
+            transform: scale(0.91);
+            pointer-events: none;
+            a{
+              .icon{
+                svg {
+                  use {
+                    fill: color(green, primary);
+                  }
+                }                
+              }
+              span{
+                color: color(green,primary);
+              }
             }
           }
         }
+        &:last-child{
+          .menu_item{
+            border: none;
+          }
+        } 
+        .menu_item{
+          position: relative;
+          height: 112px;
+          border-right:1px solid color(white,primary);
+          a {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-decoration: none;
+            .icon{
+              height: 70px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-bottom: 10px;
+              svg {
+                use {
+                  fill: color(white, primary);
+                }
+              }              
+            }
+            span{
+              color: color(white,primary);
+            }
+          }
+
+          &:hover{
+            .icon{
+              transform: scale(1.1);
+            }
+            span{
+              font-size: 20px;
+            }
+          }                 
+        }
       }
     }
+          .inner_menu{
+            display: none;
+            position: absolute;
+            right:0;
+            top:200px;
+            width: 865px;
+            background: color(white,primary);
+            border-radius: 10px;
+            @include box_shadow(1);
+            padding: 35px 50px;
+            h2{
+              padding-bottom: 15px;
+              margin-bottom: 15px;
+              border-bottom: 2px solid color(light-grey,light-100);
+            }
+            .inner_menu_list{
+              display: flex;
+              flex-wrap: wrap;
+              margin-left: -15px;
+              margin-right: -15px;
+              a{
+                height: 48px;
+                width: calc(100%/3 - 30px);
+                margin:12px 15px;
+                font-size: 16px;
+                font-weight: 600;
+              }
+            }
+            &:after{
+              position: absolute;
+              top:-38px;
+              right:30px;
+              content: url('../img/triangle_up.svg');
+            }
+          }    
+  }
+  .inner-overlay{
+    top: 0;
+    left:0;
+    right:0;
+    bottom:0;
+    position: absolute;
+    background: red;
+    z-index: 2;
   }
 }
 
 .content{
+  margin-top: 70px;
+  &-header{
+    margin-bottom: 30px;
+  }
   .apotheke{
     position: sticky;
     top: 0;
@@ -96,8 +196,64 @@
       label{
         display: flex;
         align-items: center;
+        margin:0;
+        h4{
+          margin-right: 10px;
+        }
+        .select2.select2-container{
+          margin:0 9px;
+          .select2-selection.select2-selection--single{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .select2-selection__arrow{
+              height: 48px;
+            }
+          }
+        } 
       }
-    }    
+    }
+    .sort{
+      display: flex;
+      align-items: center;
+      label{
+        display: flex;
+        align-items: center;
+        margin:0;
+        h4{
+          margin-right: 18px;
+        }
+        .select2.select2-container{
+          .select2-selection.select2-selection--single{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .select2-selection__arrow{
+              height: 48px;
+            }
+          }
+        }         
+      }
+    }        
+  }
+  .wrap-more{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 28px;
+    a{
+      height: 48px;
+      font-size: 16px;
+      font-weight: 600;
+      padding: 0.5rem  1.2rem;
+    }
+    span{
+      display: inline-block;
+      font-size: 16px;
+      font-weight: 400;
+      color:color(light-grey,primary);
+      margin-top: 15px;
+    }
   }
 }
 

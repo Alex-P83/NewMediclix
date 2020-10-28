@@ -13,6 +13,7 @@
 @import "cart";
 @import "apotheke";
 @import "rating";
+@import "select";
 
 @media (min-width: 1350px){
     .container{
@@ -31,20 +32,21 @@ body {
     //   position: relative;
     //   overflow: hidden;
     // }
-    // .overlay {
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0;
-    //   right: 0;
-    //   bottom: 0;
-    //   background: rgba(0, 0, 0, 0.3);
-    //   content: "";
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.3);
+      content: "";
     //   opacity: 0;
-    //   transition: 0.5s;
+      transition: 0.5s;
+      display: none;
     //   z-index: -2;
     //   &.active {
     //     opacity: 1;
     //     z-index: 2;
     //   }
-    // }
+    }
   }

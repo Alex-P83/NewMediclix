@@ -10,9 +10,19 @@
     font-weight: 700;
     font-size: 18px;
     color:color(white,primary);
+    &:focus{
+        box-shadow: none!important;
+    }  
     &.green{
         background: color(green,primary);
         border-color: color(green,primary);
+        &:hover{
+            background: color(green,dark-100);
+        }
+        &:active{
+            background-color: color(green,primary)!important;
+            border-color: color(green,primary)!important;
+        }      
     }
     &.blue{
         background: color(blue,primary);
@@ -21,17 +31,59 @@
 }
 
 .btn-secondary{
-    background: color(white,primary);
     border-width: 2px;
     border-style: solid;
     font-weight: 700;
     font-size: 18px;
+    &:focus{
+        box-shadow: none!important;
+    }  
     &.green{
         border-color: color(green,primary);
-        color: color(white,primary);
+        color: color(green,primary);
+        background: color(white,primary);
+        &:hover{
+            border-color: color(green,primary);
+            color: color(white,primary);
+            background: color(green,primary);            
+        }
+        &:active{
+            background-color: color(green,primary)!important;
+            border-color: color(green,primary)!important;
+        } 
     }
     &.blue{
         border-color: color(blue,primary);
-        color: color(white,primary);
+        color: color(blue,primary);
+        background: color(white,primary);
+        &:hover{
+            border-color: color(blue,primary);
+            color: color(white,primary);
+            background: color(blue,primary);              
+        }
+    }
+}
+
+.btn-tertiary{
+    border-width: 2px;
+    border-style: solid;
+    font-weight: 700;
+    font-size: 18px;
+    background: color(white,primary);
+    border:1px solid color(light-grey,primary);
+    color:color(light-grey,primary);
+    &.green{
+        &:hover{
+            background: color(green,primary);
+            border-color:color(green,primary);
+            color:color(white,primary);            
+        }
+    }
+    &.blue{
+        &:hover{
+            background: color(blue,primary);
+            border-color:color(blue,primary);
+            color:color(white,primary);            
+        }        
     }
 }

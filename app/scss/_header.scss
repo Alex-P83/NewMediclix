@@ -10,6 +10,8 @@ header{
             font-weight: 400;
             color: color(dark-grey,primary);
             text-decoration: none;
+            display: flex;
+            align-items: center;
             svg{
                 margin-right: 12px;
                 use{
@@ -18,15 +20,31 @@ header{
             }
         }
         .cart{
-            position: relative;
             font-size: 16px;
             font-weight: 400;
             color: color(dark-grey,primary);
             text-decoration: none;
-            svg{
-                margin-right: 12px;
-                use{
-                    fill:color(dark-grey,primary);
+            display: flex;
+            align-items: center;
+            &.active{
+                .icon{
+                    position: relative;
+                    margin-right: 12px;
+                    svg{
+                        use{
+                            fill:color(dark-grey,primary);
+                        }
+                    }                    
+                    &::after{
+                        position: absolute;
+                        top:-1px;
+                        right:-4px;
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        background: color(green,primary);
+                        content:'';
+                    }                    
                 }
             }
         }        
