@@ -1,0 +1,39 @@
+$stars: 5;
+$star-size: 20px;
+$star-spacing: 2px;
+$star-on-color: color(yellow,primary);
+$star-off-color: color(light-grey,primary);
+
+.rating {
+        display: inline-flex;
+        flex-direction: row-reverse;
+        align-items: center;
+	label {
+		position: relative;
+		width: $star-size;
+		height: $star-size;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&:not(:first-of-type) {
+			padding-right: $star-spacing;
+		}
+		svg{
+			use{
+                fill:color(white,primary);
+                stroke:color(yellow,primary);
+			}
+		}
+	}
+	
+	input {
+		display: none;
+	}
+	
+	input:checked ~ label svg use,
+	&:not(:checked) > label:hover svg use,
+	&:not(:checked) > label:hover ~ label svg use{
+		fill:color(yellow,primary);
+	}
+}

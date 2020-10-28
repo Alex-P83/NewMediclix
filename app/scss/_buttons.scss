@@ -1,0 +1,37 @@
+.btn{
+    border-radius: 5px;
+    height: 53px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-primary{
+    font-weight: 700;
+    font-size: 18px;
+    color:color(white,primary);
+    &.green{
+        background: color(green,primary);
+        border-color: color(green,primary);
+    }
+    &.blue{
+        background: color(blue,primary);
+        border-color: color(blue,primary);
+    }
+}
+
+.btn-secondary{
+    background: color(white,primary);
+    border-width: 2px;
+    border-style: solid;
+    font-weight: 700;
+    font-size: 18px;
+    &.green{
+        border-color: color(green,primary);
+        color: color(white,primary);
+    }
+    &.blue{
+        border-color: color(blue,primary);
+        color: color(white,primary);
+    }
+}

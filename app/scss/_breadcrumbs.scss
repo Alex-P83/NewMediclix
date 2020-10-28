@@ -1,0 +1,19 @@
+.breadcrumb {
+  padding: 0.75rem 0;
+  background: none;
+  &-item {
+    color: color(white, primary);
+    &+.breadcrumb-item{
+        &:before{
+            color: color(white, primary);
+            content:url('../img/breadcrumb-arrow.svg');
+         }
+    }
+    &.active {
+      color: color(white, primary);
+    }
+    a {
+      color: color(white, primary);
+    }
+  }
+}

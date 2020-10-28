@@ -1,0 +1,38 @@
+input{
+    height: 48px;
+    border:1px solid color(light-grey,primary);
+    background: color(white,primary);
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 16px;
+    color:color(light-grey,primary); 
+    outline: none;
+    &::-webkit-input-placeholder {
+        color: color(light-grey, primary);
+      }
+    
+      &::-moz-placeholder {
+        color: color(light-grey, primary);
+      }
+    
+      /* Firefox 19+ */
+      &:-moz-placeholder {
+        color: color(light-grey, primary);
+      }
+    
+      /* Firefox 18- */
+      &:-ms-input-placeholder {
+        color: color(light-grey, primary);
+      }     
+}
+
+button{
+    height: 48px;
+    background: color(green,primary);
+    border:none;
+    font-size: 16px;
+    color:color(white,primary);
+    border-radius: 5px;
+    outline: none;
+}
