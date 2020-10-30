@@ -50,3 +50,33 @@ header{
         }        
     }
 }
+
+@include respond(s-screen){
+    header{
+        .wrap-header{
+            .account{
+                margin-right: 30px;
+            }
+        }
+    }
+}
+
+@include respond(s-screen){
+    header{
+        .wrap-header{
+            .logo{
+                a{
+                    img{
+                        max-width: 151px;
+                    }
+                }
+            }
+            .account{
+                font-size: 0;
+            }
+            .cart{
+                font-size: 0;
+            }
+        }
+    }
+}

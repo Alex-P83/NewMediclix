@@ -1,7 +1,32 @@
 .select2-container{
+    max-width: 150px;
     .select2-selection--single{
        height: 48px; 
        border-color: color(light-grey,primary);
        outline: none;
+       .select2-selection__rendered{
+           color:color(dark-grey,primary);
+       }
+       .select2-selection__arrow{
+           display: flex;
+           justify-content: center;
+           &:after{
+               content: url('../img/select_arrow.svg');
+               margin-top: 9px;
+           }
+           b{
+               display: none;
+           }
+       }
+    }
+    .select2-dropdown{
+        border-color: color(light-grey,primary);
+        .select2-results{
+            .select2-results__options{
+                .select2-results__option--highlighted[aria-selected]{
+                    background: color(green,primary);
+                }
+            }
+        }
     }
 }

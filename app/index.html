@@ -184,7 +184,6 @@
                   <a href="#" class="btn btn-tertiary green">Naturprodukte</a>
                 </div>
               </div>
-              <!-- <div class="inner-overlay"></div>               -->
             </div>
           </li>
         </ul>
@@ -208,6 +207,8 @@
                 </select>
                 <select class="custom-select">
                   <option value="">Hersteller</option>
+                  <option value="">Hersteller 123</option>
+                  <option value="">Hersteller 1234567</option>
                 </select>
                 <select class="custom-select">
                   <option value="">Verordnung</option>
@@ -227,59 +228,79 @@
         </div>
       </div>   
       <div class="row"> 
-        <div class="col-3">
+        <div class="col-12 col-md-4 col-lg-4 col-xl-3">
           <div class="apotheke">
-            <div class="slide_btn">
-              <svg width="22" height="20">
-                <use xlink:href="/img/icons.svg#star"></use>
-              </svg>              
-            </div>
-             <div class="apotheke_img">
-               <img src="img/apotheke.jpg" alt="">
-             </div>
-             <div class="info">
-               <h4>Mohren Apotheke an der Christophskirche</h4>
-               <div class="rating">
-                <input type="radio" id="star5" name="rating1" value="5">
-                <label for="star5">
-                  <svg width="22" height="20">
-                    <use xlink:href="/img/icons.svg#star"></use>
-                  </svg>
-                </label>
-                <input type="radio" id="star4" name="rating1" value="4">
-                <label for="star4">
-                  <svg width="22" height="20">
-                    <use xlink:href="/img/icons.svg#star"></use>
-                  </svg>
-                </label>
-                <input type="radio" id="star3" name="rating1" value="3" checked="">
-                <label for="star3">
-                  <svg width="22" height="20">
-                    <use xlink:href="/img/icons.svg#star"></use>
-                  </svg>
-                </label>
-                <input type="radio" id="star2" name="rating1" value="2">
-                <label for="star2">
-                  <svg width="22" height="20">
-                    <use xlink:href="/img/icons.svg#star"></use>
-                  </svg>
-                </label>
-                <input type="radio" id="star1" name="rating1" value="1">
-                <label for="star1">
-                  <svg width="22" height="20">
-                    <use xlink:href="/img/icons.svg#star"></use>
-                  </svg>
-                </label>
+            <div class="apotheke_header">
+              <span class="inner_title">Apotheke</span>
+              <div class="slide_btn">
+                <img src="img/arrow.svg" alt="arrow">             
               </div>
-               <p>Nymphenburgerstraße 210, 80687...</p>
-               <p>Geöffnet bis 18.00 Uhr</p>
-             </div>
-
+            </div>
+            <div class="apotheke-wrapper">
+              <div class="apotheke_img">
+                <img src="img/apotheke.jpg" alt="">
+              </div>
+              <div class="info">
+                <h4 class="h-bold">Mohren Apotheke an der Christophskirche</h4>
+                <div class="rating">
+                  <input type="radio" id="star5" name="rating1" value="5">
+                  <label for="star5">
+                    <svg width="22" height="20">
+                      <use xlink:href="/img/icons.svg#star"></use>
+                    </svg>
+                  </label>
+                  <input type="radio" id="star4" name="rating1" value="4">
+                  <label for="star4">
+                    <svg width="22" height="20">
+                      <use xlink:href="/img/icons.svg#star"></use>
+                    </svg>
+                  </label>
+                  <input type="radio" id="star3" name="rating1" value="3" checked="">
+                  <label for="star3">
+                    <svg width="22" height="20">
+                      <use xlink:href="/img/icons.svg#star"></use>
+                    </svg>
+                  </label>
+                  <input type="radio" id="star2" name="rating1" value="2">
+                  <label for="star2">
+                    <svg width="22" height="20">
+                      <use xlink:href="/img/icons.svg#star"></use>
+                    </svg>
+                  </label>
+                  <input type="radio" id="star1" name="rating1" value="1">
+                  <label for="star1">
+                    <svg width="22" height="20">
+                      <use xlink:href="/img/icons.svg#star"></use>
+                    </svg>
+                  </label>
+                </div>
+                <p class="address">Nymphenburgerstraße 210, 80687...</p>
+                <p class="time">Geöffnet bis 18.00 Uhr</p>
+              </div>
+              <div class="tile_action">
+                <div class="field">
+                  <div class="icon">
+                    <svg width="18" height="16">
+                      <use xlink:href="/img/icons.svg#heart" />
+                    </svg>                    
+                  </div>
+                  <span>Als Favorit markiert</span>
+                </div>
+                <div class="field">
+                  <div class="icon">
+                    <svg width="18" height="16">
+                      <use xlink:href="/img/icons.svg#diamond" />
+                    </svg>                    
+                  </div>
+                  <span>Gold Client</span>
+                </div>                
+              </div>              
+            </div>
           </div>
         </div>
-        <div class="col-9">
+        <div class="col-12 col-md-8 col-lg-8 col-xl-9">
           <div class="row">
-            <div class="col-4">
+            <div class="col-6 col-lg-6 col-xl-4">
               <div class="cart-list">
                 <div class="cart_product">
                   <div class="product_img">
@@ -288,11 +309,11 @@
                   <h4 class="h-bold">Aponorm Fieberther-mometer easy</h4>
                   <p>10 St / Details + Plichtangaben</p>
                   <span class="price">6,58 €</span>
-                  <a href="#" class="btn btn-primary green">In den Warenkorb</a>
+                  <a href="#" class="btn btn-primary green" data-toggle="modal" data-target="#Modal">In den Warenkorb</a>
                 </div>
               </div>              
             </div>
-            <div class="col-4">
+            <div class="col-6 col-lg-6 col-xl-4">
               <div class="cart-list">
                 <div class="cart_product">
                   <div class="product_img">
@@ -305,7 +326,7 @@
                 </div>
               </div>                
             </div>
-            <div class="col-4">
+            <div class="col-6 col-lg-6 col-xl-4">
               <div class="cart-list">
                 <div class="cart_product">
                   <div class="product_img">
@@ -318,7 +339,7 @@
                 </div>
               </div>                
             </div>
-            <div class="col-4">
+            <div class="col-6 col-lg-6 col-xl-4">
               <div class="cart-list">
                 <div class="cart_product">
                   <div class="product_img">
@@ -331,7 +352,7 @@
                 </div>
               </div>              
             </div>
-            <div class="col-4">
+            <div class="col-6 col-lg-6 col-xl-4">
               <div class="cart-list">
                 <div class="cart_product">
                   <div class="product_img">
@@ -344,7 +365,7 @@
                 </div>
               </div>                
             </div>
-            <div class="col-4">
+            <div class="col-6 col-lg-6 col-xl-4">
               <div class="cart-list">
                 <div class="cart_product">
                   <div class="product_img">
@@ -372,51 +393,54 @@
     </div>
   </section>
   <!-- Footer  -->
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-4">
-          <div class="logo">
-            <a href="#"><img src="img/logo_2.svg" alt="logo"></a>
-          </div>
-          <p>Mediclix ist eine Serviceplattform um Ihre lokale
-          Apotheke mit Kunden digital und persönlich zusammenzubringen. </p>
-        </div>
-        <div class="col-3">
-          <h3 class="h-bold">Customer</h3>
-          <ul>
-            <li><a href="#">Bezahlung & Lieferung</a></li>
-            <li><a href="#">Bonusaktion</a></li>
-            <li><a href="#">Support</a></li>
-          </ul>
-        </div>
-        <div class="col-3">
-          <h3 class="h-bold">Pharmacy</h3>
-          <ul>
-            <li><a href="#">Für Apotheken</a></li>
-            <li><a href="#">Pakete und Preise</a></li>
-            <li><a href="#">Business Support</a></li>
-          </ul>
-        </div>
-        <div class="col-2">
-          <h3 class="h-bold">mediclix</h3>
-          <ul>
-            <li><a href="#">Über uns</a></li>
-            <li><a href="#">Kontakt</a></li>
-            <li><a href="#">News & Presse</a></li>                
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
+  <footer class="main_page">
+    <div class="footer__wrapper">
       <div class="container">
-        <ul>
-          <li>© mediclix.de</li>
-          <li>AGB</li>
-          <li>Datenschutz</li>
-          <li>Impressum</li>
-        </ul>        
+        <div class="figure"></div>
+        <div class="row">
+          <div class="col-md-12 col-lg-4 col-xl-4">
+            <div class="logo">
+              <a href="#"><img src="img/logo_2.svg" alt="logo"></a>
+            </div>
+            <p>Mediclix ist eine Serviceplattform um Ihre lokale
+            Apotheke mit Kunden digital und persönlich zusammenzubringen. </p>
+          </div>
+          <div class="col-12 col-sm-4 col-lg-3 col-xl-3">
+            <h3 class="h-bold">Customer</h3>
+            <ul>
+              <li><a href="#">Bezahlung & Lieferung</a></li>
+              <li><a href="#">Bonusaktion</a></li>
+              <li><a href="#">Support</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-sm-4 col-lg-3 col-xl-3">
+            <h3 class="h-bold">Pharmacy</h3>
+            <ul>
+              <li><a href="#">Für Apotheken</a></li>
+              <li><a href="#">Pakete und Preise</a></li>
+              <li><a href="#">Business Support</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-sm-4 col-lg-2 col-xl-2">
+            <h3 class="h-bold">mediclix</h3>
+            <ul>
+              <li><a href="#">Über uns</a></li>
+              <li><a href="#">Kontakt</a></li>
+              <li><a href="#">News & Presse</a></li>                
+            </ul>
+          </div>
+        </div>
       </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <ul>
+            <li>© mediclix.de</li>
+            <li>AGB</li>
+            <li>Datenschutz</li>
+            <li>Impressum</li>
+          </ul>        
+        </div>
+      </div>      
     </div>
   </footer>
   <!-- Messange  -->
@@ -431,17 +455,119 @@
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <h2 class="h-bold">Hersteller (1)</h2>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+            <svg width="19" height="19">
+              <use xlink:href="/img/icons.svg#close"></use>
+            </svg>            
           </button>
         </div>
         <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <form action="">
+            <input type="search" name="search" placeholder="Hersteller suchen">
+            <div class="check-list">
+              <div class="label-field">
+                <input type="checkbox" id="field_1">
+                <label for="field_1">Aspirin</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_2">
+                <label for="field_2">Aspirin</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_3">
+                <label for="field_3">Aspirin</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_4">
+                <label for="field_4">Aspirin</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_5">
+                <label for="field_5">Aspirin</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_6">
+                <label for="field_6">Aspirin</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_7">
+                <label for="field_7">Aspirin</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_8">
+                <label for="field_8">Aspirin</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_9">
+                <label for="field_9">Aspirin</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_10">
+                <label for="field_10">Aspirin</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_11">
+                <label for="field_11">Aspirin</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_12">
+                <label for="field_12">Aspirin</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_13">
+                <label for="field_13">Aspirin</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_14">
+                <label for="field_14">Aspirin</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_15">
+                <label for="field_15">Aspirin</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_16">
+                <label for="field_16">Aspirin</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_17">
+                <label for="field_17">Aspirin</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_18">
+                <label for="field_18">Aspirin</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_19">
+                <label for="field_19">Aspirin</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_20">
+                <label for="field_20">Aspirin</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_21">
+                <label for="field_21">Aspirin</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_22">
+                <label for="field_22">Aspirin</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_23">
+                <label for="field_23">Aspirin</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_24">
+                <label for="field_24">Aspirin</label>                
+              </div>                                                                                                                              
+            </div>
+            <div class="wrap-btn">
+              <button class="btn btn-secondary green">Zurücksetzen</button>
+              <button class="btn btn-primary green">Anwenden</button>              
+            </div>
+          </form>
         </div>
       </div>
     </div>

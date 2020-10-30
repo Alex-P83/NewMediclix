@@ -27,6 +27,10 @@ input{
       }     
 }
 
+input[type="checkbox"]{
+  
+}
+
 button{
     height: 48px;
     background: color(green,primary);
@@ -36,3 +40,4 @@ button{
     border-radius: 5px;
     outline: none;
 }
+

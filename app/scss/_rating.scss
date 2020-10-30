@@ -16,9 +16,9 @@ $star-off-color: color(light-grey,primary);
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		&:not(:first-of-type) {
-			padding-right: $star-spacing;
-		}
+		// &:not(:first-of-type) {
+		// 	padding-right: $star-spacing;
+		// }
 		svg{
 			use{
                 fill:color(white,primary);

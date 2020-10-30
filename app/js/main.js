@@ -16,4 +16,10 @@ $(function(){
         $('.overlay').hide();    
     })    
   
+
+    $('.slide_btn').on('click',function(){
+        $('.apotheke-wrapper').slideToggle();
+        $(this).parent().toggleClass('active');
+    })
+
 });
