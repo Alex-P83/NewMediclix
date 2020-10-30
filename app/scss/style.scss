@@ -4,7 +4,6 @@
 @import "mixins";
 @import "function";
 @import "typography";
-@import "pages/main.scss";
 @import "header";
 @import "footer";
 @import "breadcrumbs";
@@ -15,6 +14,8 @@
 @import "rating";
 @import "select";
 @import "modal";
+@import "pages/main.scss";
+@import "pages/home.scss";
 
 @media (min-width: 1350px){
     .container{

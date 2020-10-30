@@ -18,6 +18,7 @@
         border-color: color(green,primary);
         &:hover{
             background: color(green,dark-100);
+            border-color: color(green,dark-100);
         }
         &:active{
             background-color: color(green,primary)!important;
