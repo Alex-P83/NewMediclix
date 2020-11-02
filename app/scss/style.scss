@@ -14,8 +14,10 @@
 @import "rating";
 @import "select";
 @import "modal";
+@import "mobile-menu";
 @import "pages/main.scss";
 @import "pages/home.scss";
+@import "pages/home-apotheke.scss";
 
 @media (min-width: 1350px){
     .container{
@@ -30,10 +32,10 @@ body {
     font-weight: 400;
     background: color(white, primary);
     color: color(dark-grey, primary);
-    // &.disable {
-    //   position: relative;
-    //   overflow: hidden;
-    // }
+    &.disable {
+      position: relative;
+      overflow: hidden;
+    }
     .overlay {
       position: absolute;
       top: 0;
@@ -42,13 +44,12 @@ body {
       bottom: 0;
       background: rgba(0, 0, 0, 0.3);
       content: "";
-    //   opacity: 0;
+      opacity: 0;
       transition: 0.5s;
-      display: none;
-    //   z-index: -2;
-    //   &.active {
-    //     opacity: 1;
-    //     z-index: 2;
-    //   }
+      z-index: -2;
+      &.active {
+        opacity: 1;
+        z-index: 2;
+      }
     }
   }

@@ -49,8 +49,16 @@ header{
             }
         }        
     } 
-    &.home-header{
+    &.home-page{
+        .container{
+            max-width: 100%;
+        }
         .wrap-header{
+            .logo{
+                .mobile{
+                    display: none;
+                }
+            }
             .menu{
                 margin-left: auto;
                 margin-right: 20px;
@@ -61,10 +69,11 @@ header{
                     align-items: center;
                     li{
                         list-style: none;
-                        margin:0 35px;
+                        margin:0 30px;
                         a{
                             font-size: 16px;
-                            padding: 10px 0;
+                            line-height: 1.3;
+                            padding: 8px 4px;
                             font-weight: 400;
                             color: color(white,primary);
                             text-decoration: none;
@@ -81,22 +90,21 @@ header{
             .login{
                 width: 110px;
             }
+            .menu-btn{
+                display: none;
+                svg{
+                    use{
+                        stroke:color(white,primary);
+                    }
+                }
+            }
         }
     } 
 }
 
 @include respond(s-screen){
     header{
-        .wrap-header{
-            .account{
-                margin-right: 30px;
-            }
-        }
-    }
-}
-
-@include respond(s-screen){
-    header{
+        padding: 20px 0;
         .wrap-header{
             .logo{
                 a{
@@ -106,10 +114,33 @@ header{
                 }
             }
             .account{
+                margin-right: 30px;
                 font-size: 0;
             }
             .cart{
                 font-size: 0;
+            }            
+        }
+        &.home-page{
+            .wrap-header{
+                justify-content: space-between;
+                .logo{
+                    .desktop{
+                        display: none;
+                    }
+                    .mobile{
+                        display: block;
+                    }
+                }
+                .menu{
+                    display: none;
+                }
+                .login{
+                    display: none;
+                }
+                .menu-btn{
+                    display: block;
+                }                
             }
         }
     }
