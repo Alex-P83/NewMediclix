@@ -4,6 +4,25 @@
     @include box_shadow(1);
     padding: 27px 27px 5px;
     border-radius: 10px;
+    background: color(white,primary);
+    &.side_bar{
+        .inner_title{
+            display: none;
+        }
+        .slide_btn{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: color(light-grey,light-100);
+            margin-left: auto;
+            cursor: pointer;
+            z-index: 2;
+
+        }        
+    }
     &_header{
         display: flex;
         align-items: center;
@@ -21,22 +40,6 @@
                 }                
             }
         }        
-    }
-    .inner_title{
-        display: none;
-    }
-    .slide_btn{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 42px;
-        height: 42px;
-        border-radius: 50%;
-        background: color(light-grey,light-100);
-        margin-left: auto;
-        cursor: pointer;
-        z-index: 2;
-
     }
     &_img{
         text-align: center;

@@ -27,7 +27,15 @@
     }
     &.blue{
         background: color(blue,primary);
-        border-color: color(blue,primary);       
+        border-color: color(blue,primary);
+        &:hover{
+            background: color(blue,dark-100);
+            border-color: color(blue,dark-100);
+        }
+        &:active{
+            background-color: color(blue,primary)!important;
+            border-color: color(blue,primary)!important;
+        }                
     }
 }
 
