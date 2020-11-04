@@ -25,7 +25,8 @@ $(function(){
 
     $('.btn-arrow').on('click',function(e){
         e.preventDefault();
-        $('.apotheke_side_bar').toggle('slide');
+        $('.apotheke_side_bar').slideToggle();
+        $(this).toggleClass('active');
     });
  
 //Menu

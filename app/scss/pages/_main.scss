@@ -153,14 +153,24 @@
           margin: 12px 15px;
           font-size: 16px;
           font-weight: 600;
+          color: color(dark-grey,primary);
         }
       }
       &:after {
         position: absolute;
         top: -38px;
         right: 30px;
-        content: url("../img/triangle_up.svg");
+        content: url("../img/content/product_page/triangle_up.svg");
       }
+    }
+    a{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: 400;
+      color:color(white,primary);
+      text-decoration: none;
     }
   }
 }
@@ -173,6 +183,7 @@
   }
   .apotheke_block{
     border-radius: 10px;
+    margin-bottom: 30px;
     .slide_btn {
       display: flex;
       align-items: center;
@@ -195,6 +206,14 @@
     align-items: center;
     justify-content: space-between;
     padding:20px 24px; 
+    .inner_title{
+      font-size: 22px;
+    }
+    .btn-arrow{
+      &.active{
+        transform: rotate(-180deg);
+      }
+    }
   }  
 }
 
@@ -265,6 +284,20 @@
         }
       }
     }
+    a.filter-btn{
+      height: 40px;
+      padding: 5px 31px;
+      display:none;
+      align-items: center;
+      justify-content: center;
+      border:1px solid color(light-grey,primary);
+      border-radius: 5px;
+      text-decoration: none;
+      margin:0 9px;
+      font-size: 16px;
+      font-weight: 400;
+      color:color(dark-grey,primary);
+    }
   }
   .banner{
     img{
@@ -312,6 +345,18 @@
 }
 
 @include respond(lg-screen){
+  .main_menu{
+    .menu{
+      ul{
+        li{
+          width: calc(100%/7);
+          &:nth-child(7){
+            display: none;
+          }
+        }
+      }
+    }
+  }
   .content{
     .filter_wrapper{
       flex-direction: column;
@@ -334,11 +379,44 @@
       ul{
         li{
           width: calc(100% / 4);
+          &:nth-of-type(4),
+          &:nth-of-type(5),
+          &:nth-of-type(6){
+            display: none;
+          }
         }
       }
     }
   }
+  .content{
+    .filter_wrapper{
+      flex-direction: row;
+      align-items: center;
+      .filter{
+        display: none;
+      }
+      a.filter-btn{
+        display: block;
+      }
+      .sort{
+        label{
+          h4{
+            display: none;
+          }
+          .select2-container .select2-selection--single{
+            height: 40px;
+          }
+          .select2.select2-container .select2-selection.select2-selection--single .select2-selection__arrow{
+            height: 38px;
+          }
+        }
+      }
+    } 
+  } 
   .side_bar{
+    &>h2{
+      display: none;
+    }
     .apotheke_block{
       @include box_shadow(1);
       .apotheke_header{
@@ -350,6 +428,27 @@
     }    
   }
 }
+
+@include respond(s-screen) {
+  .main_menu{
+    .menu{
+      ul{
+        li{
+          width: calc(100%/3);
+          &:nth-of-type(8){
+            display: none;
+          }
+          &:nth-of-type(3){
+            .menu_item{
+              border: none;
+            }
+          }
+        }
+      }
+    }
+  }  
+}
+
 
 @include respond(es-screen) {
   .main_screen {
@@ -371,4 +470,16 @@
       }
     }
   }
+  .main_menu{
+    .menu{
+      ul{
+        li{
+          width: calc(100%/3);
+          &:nth-child(n+4){
+            display: none;
+          }
+        }
+      }
+    }
+  }  
 }

@@ -62,7 +62,7 @@
           <input type="text" name="" placeholder="Nach Produkt, Hersteller, etc. suchen">
           <button>Suchen</button>
         </form>
-        <a href="#" data-toggle="modal" data-target="#Modal">oder Rezept hochladen <img src="img/shared/breadcrumb-arrow.svg" alt=""> </a>
+        <a href="#">oder Rezept hochladen <img src="img/shared/breadcrumb-arrow.svg" alt=""> </a>
       </div>
     </div>
   </section>
@@ -187,6 +187,7 @@
             </div>
           </li>
         </ul>
+        <a href="#" data-toggle="modal" data-target="#Modal_menu">mehr anzeigen</a>
       </div>
     </div>
   </section>
@@ -277,11 +278,11 @@
                 <div class="filter">
                     <h4 class="h-bold">Filter</h4>
                     <a href="" class="btn-filter" data-toggle="modal" data-target="#Modal2">Beschwerden <img src="img/shared/select_arrow.svg" alt="arrow"> </a>
-                    <a href="" class="btn-filter" data-toggle="modal" data-target="#Modal2">Hersteller <img src="img/shared/select_arrow.svg" alt="arrow"> </a>
+                    <a href="" class="btn-filter" data-toggle="modal" data-target="#Modal">Hersteller <img src="img/shared/select_arrow.svg" alt="arrow"> </a>
                     <a href="" class="btn-filter" data-toggle="modal" data-target="#Modal2">Verordnung <img src="img/shared/select_arrow.svg" alt="arrow"> </a>
                     <a href="" class="btn-more" data-toggle="modal" data-target="#Modal2">mehr anzeigen</a>
                 </div>
-                <a href="#" class="btn-filter" style="display: none;">Filter</a>
+                <a href="#" class="filter-btn">Filter</a>
                 <div class="sort">
                   <label for="">
                     <h4 class="h-bold">Sort</h4>
@@ -583,7 +584,39 @@
         </div>
       </div>
     </div>
-  </div>    
+  </div>
+  <div class="modal fade" id="Modal_menu" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="h-bold">Menu</h2>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg width="19" height="19">
+              <use xlink:href="img/shared/icons.svg#close"></use>
+            </svg>            
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="inner_menu_list">
+            <a href="#" class="btn btn-tertiary green">Naturprodukte</a>
+            <a href="#" class="btn btn-tertiary green">Naturprodukte</a>
+            <a href="#" class="btn btn-tertiary green">Naturprodukte</a>
+            <a href="#" class="btn btn-tertiary green">Naturprodukte</a>
+            <a href="#" class="btn btn-tertiary green">Naturprodukte</a>
+            <a href="#" class="btn btn-tertiary green">Naturprodukte</a>
+            <a href="#" class="btn btn-tertiary green">Naturprodukte</a>
+            <a href="#" class="btn btn-tertiary green">Naturprodukte</a>
+            <a href="#" class="btn btn-tertiary green">Naturprodukte</a>
+            <a href="#" class="btn btn-tertiary green">Naturprodukte</a>
+            <a href="#" class="btn btn-tertiary green">Naturprodukte</a>
+            <a href="#" class="btn btn-tertiary green">Naturprodukte</a>
+            <a href="#" class="btn btn-tertiary green">Naturprodukte</a>
+            <a href="#" class="btn btn-tertiary green">Naturprodukte</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>      
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/libs.min.js"></script>
   <script src="js/main.js"></script>

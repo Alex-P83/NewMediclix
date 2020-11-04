@@ -85,14 +85,14 @@
         &:hover{
             background: color(green,primary);
             border-color:color(green,primary);
-            color:color(white,primary);            
+            color:color(white,primary)!important;            
         }
     }
     &.blue{
         &:hover{
             background: color(blue,primary);
             border-color:color(blue,primary);
-            color:color(white,primary);            
+            color:color(white,primary)!important;            
         }        
     }
 }
