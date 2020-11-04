@@ -18,9 +18,15 @@ $(function(){
   
 
     $('.slide_btn').on('click',function(){
-        $('.apotheke-wrapper').slideToggle();
+        $('.apotheke_side_bar').toggle('slide');
         $(this).parent().toggleClass('active');
+        $(this).toggleClass('active');
     })
+
+    $('.btn-arrow').on('click',function(e){
+        e.preventDefault();
+        $('.apotheke_side_bar').toggle('slide');
+    });
  
 //Menu
 
