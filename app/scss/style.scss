@@ -15,9 +15,11 @@
 @import "select";
 @import "modal";
 @import "mobile-menu";
-@import "pages/main.scss";
-@import "pages/home.scss";
-@import "pages/home-apotheke.scss";
+@import "pages/store";
+@import "pages/home";
+@import "pages/home-business";
+@import "shared/cookie-banner";
+@import "shared/splash-screen";
 
 @media (min-width: 1350px){
     .container{
@@ -29,6 +31,9 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     position: relative;
     font-family: "Source Sans Pro", sans-serif;
     font-size: 16px;

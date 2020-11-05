@@ -19,6 +19,7 @@
     }
     h4{
         margin-bottom: 7px;
+        min-height: 40px;
     }
     p{
         margin-bottom: 9px;
@@ -28,4 +29,38 @@
         margin-top: 10px;
     }
   }
+}
+
+
+@include respond(s-screen){
+    .cart{
+        &_product{
+            padding: 15px;
+            .product_img{
+                height: 160px;
+            }
+        }
+    }
+}
+
+@include respond(es-screen){
+    .cart{
+        &_product{
+            padding: 15px;
+            .product_img{
+                height: 100px;
+            }
+            h4{
+                font-size: 16px;
+            }
+            .price{
+                font-size: 22px;
+            }
+            a{
+                height: 43px;
+                font-size: 14px;
+                font-weight: 600;
+            }
+        }
+    }
 }
