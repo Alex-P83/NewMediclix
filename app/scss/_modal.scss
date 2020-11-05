@@ -1,8 +1,4 @@
 .modal {
-    &-dialog {
-        width: 100%;
-        max-width: 865px;
-    }
     &-content {
         padding: 50px;
     }
@@ -43,8 +39,8 @@
     &-body{
         padding: 0;
         form{
-            input[type="search"]{
-                background:url('../img/search.svg') no-repeat center left 18px, color(light-grey,light-100);
+            input[type="text"]{
+                background:url('img/shared/search.svg') no-repeat center left 18px, color(light-grey,light-100);
                 border: none;
                 width: 100%;
                 padding-left: 44px;
@@ -121,5 +117,36 @@
                 }
             }
         }
+    }
+    &.filter-modal{
+        .modal-dialog {
+            max-width: 865px;
+        }
+    }
+    &.all-filter-modal{
+        .filter_list {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -15px;
+            margin-right: -15px;
+            a {
+            width: calc(100% / 3 - 30px);
+            height: 48px;
+            padding: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border:1px solid color(light-grey,primary);
+            border-radius: 5px;
+            text-decoration: none;
+            margin:5px 15px;
+            font-size: 16px;
+            font-weight: 400;
+            color:color(dark-grey,primary);
+            img{
+                margin-left: 5px;
+            }
+            }
+          }        
     }
 }

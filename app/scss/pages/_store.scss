@@ -47,6 +47,7 @@
 .main_menu {
   margin-top: -60px;
   .menu {
+    text-align: center;
     background: linear-gradient(90.93deg, #3c9326 -2.03%, #6dc433 100%);
     border-radius: 20px;
     position: relative;
@@ -57,6 +58,7 @@
       justify-content: center;
       flex-wrap: wrap;
       padding: 0;
+      margin: 0;
       li {
         width: calc(100% / 8);
         list-style: none;
@@ -171,6 +173,14 @@
       font-weight: 400;
       color:color(white,primary);
       text-decoration: none;
+      svg{
+        position: relative;
+        margin-left: 5px;
+        top: 2px;
+        use{
+          fill:color(white,primary);
+        }
+      }
     }
   }
 }
@@ -210,6 +220,10 @@
       font-size: 22px;
     }
     .btn-arrow{
+      font-size: 0;
+      img{
+        width: 12px;
+      }
       &.active{
         transform: rotate(-180deg);
       }
@@ -357,12 +371,31 @@
       }
     }
   }
+  .side_bar{
+    h2{
+      line-height: 40px;
+    } 
+  } 
   .content{
     .filter_wrapper{
-      flex-direction: column;
-      align-items: flex-start;
-      label{
-        margin:5px 0!important;
+      .filter{
+        display: none;
+      }
+      a.filter-btn{
+        display: block;
+      }
+      .sort{
+        label{
+          h4{
+            display: none;
+          }
+          .select2-container .select2-selection--single{
+            height: 40px;
+          }
+          .select2.select2-container .select2-selection.select2-selection--single .select2-selection__arrow{
+            height: 38px;
+          }
+        }
       }
     }
   }
@@ -386,30 +419,21 @@
           }
         }
       }
+      .inner_menu{
+        width: 690px;
+        .inner_menu_list{
+          a{
+            width: calc(100% / 3 - 20px);
+            margin: 5px 10px;
+          }
+        }
+      }
     }
   }
   .content{
     .filter_wrapper{
-      flex-direction: row;
-      align-items: center;
-      .filter{
-        display: none;
-      }
       a.filter-btn{
-        display: block;
-      }
-      .sort{
-        label{
-          h4{
-            display: none;
-          }
-          .select2-container .select2-selection--single{
-            height: 40px;
-          }
-          .select2.select2-container .select2-selection.select2-selection--single .select2-selection__arrow{
-            height: 38px;
-          }
-        }
+        margin: 0;
       }
     } 
   } 
@@ -421,6 +445,7 @@
       @include box_shadow(1);
       .apotheke_header{
         display: flex;
+        padding: 17px 20px;
       }
       .slide_btn{
         display: none;
@@ -432,9 +457,11 @@
 @include respond(s-screen) {
   .main_menu{
     .menu{
+      padding-bottom: 10px;
       ul{
         li{
           width: calc(100%/3);
+          padding: 20px 0;
           &:nth-of-type(8){
             display: none;
           }
@@ -444,6 +471,9 @@
             }
           }
         }
+      }
+      a.more{
+        display: inline-flex;
       }
     }
   }  
@@ -480,6 +510,15 @@
           }
         }
       }
+    }
+  }
+  .message_bubble{
+    bottom:15px;
+    right:15px;
+    width: 50px;
+    height: 50px;
+    svg{
+      width: 27px;
     }
   }  
 }

@@ -1,13 +1,21 @@
-.top-header {
-  &.home-page{
-    min-height: 755px;
-    background: url("../img/content/home/home_bg.svg") no-repeat top right;    
-  }
-}
-
 .main_home-screen {
-  margin-top: 140px;
+  min-height: 755px;
+  position: relative;
+  margin-top: -103px;
+  padding-bottom: 30px;
+  img{
+    position: absolute;
+    top:0;
+    right:0;
+    max-width: 100%;
+    &.mobile-img{
+      display: none;
+    }
+  }     
   .title {
+    position: relative;
+    z-index: 1;
+    margin-top: 245px;
     h1 {
       span {
         font-weight: 300;
@@ -19,13 +27,15 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    position: relative;
+    z-index: 1;
     input {
       width: 100%;
       max-width: 290px;
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
       padding-left: 40px;
-      background: url("../../img/marker.svg") no-repeat left 10px center,
+      background: url("../img/shared/marker.svg") no-repeat left 10px center,
         color(white, primary);
     }
     button {
@@ -378,6 +388,7 @@
 }
 
 @include respond(m-screen) {
+ 
   .convenient_order {
     border: none;
     &_block {
@@ -425,13 +436,9 @@
 }
 
 @include respond(s-screen) {
-  .top-header {
-    &.home-page{
-      background-size: 100%;
-      min-height: auto; 
-      padding-bottom: 30px;     
-    }
-  }
+  .main_home-screen {
+    min-height: auto;
+  }   
   .always_near {
     .video-content {
       height: 285px;
@@ -440,17 +447,22 @@
 }
 
 @include respond(es-screen) {
-    .top-header{
-      &.home-page{
-        background: url("../img/content/home/home_bg_mobile.svg") no-repeat top right;
-        background-size: 100%;        
+  .main_home-screen {
+    img{
+      position: relative;
+      max-width: none;
+      width: 100%;
+      &.desktop-img{
+        display: none;
+      }
+      &.mobile-img{
+        display: block;
       }
     }
-  .main_home-screen {
-    margin-top: 250px;
     .title {
       text-align: center;
       margin-bottom: 29px;
+      margin-top: 20px;
     }
     form {
       input {

@@ -187,7 +187,12 @@
             </div>
           </li>
         </ul>
-        <a href="#" class="more" data-toggle="modal" data-target="#Modal_menu">mehr anzeigen</a>
+        <a href="#" class="more" data-toggle="modal" data-target="#modal_menu">
+          mehr anzeigen
+          <svg width="9" height="6">
+            <use xlink:href="img/shared/icons.svg#arrow-select" />
+          </svg> 
+        </a>
       </div>
     </div>
   </section>
@@ -277,12 +282,12 @@
               <div class="filter_wrapper">
                 <div class="filter">
                     <h4 class="h-bold">Filter</h4>
-                    <a href="" class="btn-filter" data-toggle="modal" data-target="#Modal2">Beschwerden <img src="img/shared/select_arrow.svg" alt="arrow"> </a>
-                    <a href="" class="btn-filter" data-toggle="modal" data-target="#Modal">Hersteller <img src="img/shared/select_arrow.svg" alt="arrow"> </a>
-                    <a href="" class="btn-filter" data-toggle="modal" data-target="#Modal2">Verordnung <img src="img/shared/select_arrow.svg" alt="arrow"> </a>
-                    <a href="" class="btn-more" data-toggle="modal" data-target="#Modal2">mehr anzeigen</a>
+                    <a href="" class="btn-filter" data-toggle="modal" data-target="#filter-btn-1">Beschwerden <img src="img/shared/select_arrow.svg" alt="arrow"> </a>
+                    <a href="" class="btn-filter" data-toggle="modal" data-target="#filter-btn-2">Hersteller <img src="img/shared/select_arrow.svg" alt="arrow"> </a>
+                    <a href="" class="btn-filter" data-toggle="modal" data-target="#filter-btn-3">Verordnung <img src="img/shared/select_arrow.svg" alt="arrow"> </a>
+                    <a href="" class="btn-more" data-toggle="modal" data-target="#more-filter">mehr anzeigen</a>
                 </div>
-                <a href="#" class="filter-btn">Filter</a>
+                <a href="#" class="filter-btn" data-toggle="modal" data-target="#all-filters">Filter</a>
                 <div class="sort">
                   <label for="">
                     <h4 class="h-bold">Sort</h4>
@@ -386,10 +391,9 @@
     </div>
   </section>
   <!-- Footer  -->
-  <footer class="main_page">
+  <footer>
     <div class="footer__wrapper">
       <div class="container">
-        <div class="figure"></div>
         <div class="row">
           <div class="col-md-12 col-lg-4 col-xl-4">
             <div class="logo">
@@ -423,18 +427,18 @@
             </ul>
           </div>
         </div>
-      </div>
-      <div class="footer-bottom">
-        <div class="container">
-          <ul>
-            <li>© mediclix.de</li>
-            <li>AGB</li>
-            <li>Datenschutz</li>
-            <li>Impressum</li>
-          </ul>        
-        </div>
       </div>      
     </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <ul>
+          <li>© mediclix.de</li>
+          <li>AGB</li>
+          <li>Datenschutz</li>
+          <li>Impressum</li>
+        </ul>        
+      </div>
+    </div>    
   </footer>
   <!-- Messange  -->
   <a href="#" class="message_bubble">
@@ -444,7 +448,134 @@
   </a>
   <div class="overlay"></div>
   <!-- Modal -->
-  <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+  <div class="modal fade filter-modal" id="filter-btn-1" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="h-bold">
+            <a href="#">
+            <svg width="9" height="6">
+              <use xlink:href="img/shared/icons.svg#arrow-select"></use>
+            </svg>                
+            </a>
+             Beschwerden  (2)</h2>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg width="19" height="19">
+              <use xlink:href="img/shared/icons.svg#close"></use>
+            </svg>            
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="">
+            <input type="text" name="search" placeholder="Hersteller suchen">
+            <div class="check-list">
+              <div class="label-field">
+                <input type="checkbox" id="field_1">
+                <label for="field_1">Nurofen</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_2">
+                <label for="field_2">Nurofen</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_3">
+                <label for="field_3">Nurofen</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_4">
+                <label for="field_4">Nurofen</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_5">
+                <label for="field_5">Nurofen</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_6">
+                <label for="field_6">Nurofen</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_7">
+                <label for="field_7">Nurofen</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_8">
+                <label for="field_8">Nurofen</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_9">
+                <label for="field_9">Nurofen</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_10">
+                <label for="field_10">Nurofen</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_11">
+                <label for="field_11">Nurofen</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_12">
+                <label for="field_12">Nurofen</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_13">
+                <label for="field_13">Nurofen</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_14">
+                <label for="field_14">Nurofen</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_15">
+                <label for="field_15">Nurofen</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_16">
+                <label for="field_16">Nurofen</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_17">
+                <label for="field_17">Nurofen</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_18">
+                <label for="field_18">Nurofen</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_19">
+                <label for="field_19">Nurofen</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_20">
+                <label for="field_20">Nurofen</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_21">
+                <label for="field_21">Nurofen</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_22">
+                <label for="field_22">Nurofen</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_23">
+                <label for="field_23">Nurofen</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_24">
+                <label for="field_24">Nurofen</label>                
+              </div>                                                                                                                              
+            </div>
+            <div class="wrap-btn">
+              <button class="btn btn-secondary green">Zurücksetzen</button>
+              <button class="btn btn-primary green">Anwenden</button>              
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>  
+  <div class="modal fade filter-modal" id="filter-btn-2" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
@@ -457,7 +588,7 @@
         </div>
         <div class="modal-body">
           <form action="">
-            <input type="search" name="search" placeholder="Hersteller suchen">
+            <input type="text" name="search" placeholder="Hersteller suchen">
             <div class="check-list">
               <div class="label-field">
                 <input type="checkbox" id="field_1">
@@ -565,11 +696,11 @@
       </div>
     </div>
   </div>
-  <div class="modal fade" id="Modal2" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+  <div class="modal fade filter-modal" id="filter-btn-3" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h2 class="h-bold">Modal</h2>
+          <h2 class="h-bold">Verordnung  (3)</h2>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <svg width="19" height="19">
               <use xlink:href="img/shared/icons.svg#close"></use>
@@ -577,15 +708,116 @@
           </button>
         </div>
         <div class="modal-body">
+          <form action="">
+            <input type="text" name="search" placeholder="Hersteller suchen">
+            <div class="check-list">
+              <div class="label-field">
+                <input type="checkbox" id="field_1">
+                <label for="field_1">Aponorm</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_2">
+                <label for="field_2">Aponorm</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_3">
+                <label for="field_3">Aponorm</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_4">
+                <label for="field_4">Aponorm</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_5">
+                <label for="field_5">Aponorm</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_6">
+                <label for="field_6">Aponorm</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_7">
+                <label for="field_7">Aponorm</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_8">
+                <label for="field_8">Aponorm</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_9">
+                <label for="field_9">Aponorm</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_10">
+                <label for="field_10">Aponorm</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_11">
+                <label for="field_11">Aponorm</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_12">
+                <label for="field_12">Aponorm</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_13">
+                <label for="field_13">Aponorm</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_14">
+                <label for="field_14">Aponorm</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_15">
+                <label for="field_15">Aponorm</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_16">
+                <label for="field_16">Aponorm</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_17">
+                <label for="field_17">Aponorm</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_18">
+                <label for="field_18">Aponorm</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_19">
+                <label for="field_19">Aponorm</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_20">
+                <label for="field_20">Aponorm</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_21">
+                <label for="field_21">Aponorm</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_22">
+                <label for="field_22">Aponorm</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_23">
+                <label for="field_23">Aponorm</label>                
+              </div>
+              <div class="label-field">
+                <input type="checkbox" id="field_24">
+                <label for="field_24">Aponorm</label>                
+              </div>                                                                                                                              
+            </div>
             <div class="wrap-btn">
               <button class="btn btn-secondary green">Zurücksetzen</button>
               <button class="btn btn-primary green">Anwenden</button>              
             </div>
+          </form>
         </div>
       </div>
     </div>
   </div>
-  <div class="modal fade" id="Modal_menu" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+  <div class="modal fade" id="modal_menu" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
@@ -616,7 +848,56 @@
         </div>
       </div>
     </div>
-  </div>      
+  </div>
+  <div class="modal fade all-filter-modal" id="more-filter" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="h-bold">Filter</h2>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg width="19" height="19">
+              <use xlink:href="img/shared/icons.svg#close"></use>
+            </svg>            
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="filter_list">
+            <a href="" class="btn-filter">Beschwerden <img src="img/shared/select_arrow.svg" alt="arrow"> </a>
+            <a href="" class="btn-filter">Hersteller  <img src="img/shared/select_arrow.svg" alt="arrow"> </a>
+            <a href="" class="btn-filter">Verordnung  <img src="img/shared/select_arrow.svg" alt="arrow"> </a>
+            <a href="" class="btn-filter">Beschwerden <img src="img/shared/select_arrow.svg" alt="arrow"> </a>
+            <a href="" class="btn-filter">Hersteller  <img src="img/shared/select_arrow.svg" alt="arrow"> </a>            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade all-filter-modal" id="all-filters" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true"> 
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="h-bold">Filter</h2>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <svg width="19" height="19">
+              <use xlink:href="img/shared/icons.svg#close"></use>
+            </svg>            
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="filter_list">
+            <a href="" class="btn-filter" data-toggle="modal" data-target="#filter-btn-1" data-dismiss="modal">Beschwerden <img src="img/shared/select_arrow.svg" alt="arrow"> </a>
+            <a href="" class="btn-filter" data-toggle="modal" data-target="#filter-btn-2" data-dismiss="modal">Hersteller  <img src="img/shared/select_arrow.svg" alt="arrow"> </a>
+            <a href="" class="btn-filter" data-toggle="modal" data-target="#filter-btn-3" data-dismiss="modal">Verordnung  <img src="img/shared/select_arrow.svg" alt="arrow"> </a>
+            <a href="" class="btn-filter" data-toggle="modal" data-target="#filter-btn-1" data-dismiss="modal">Beschwerden <img src="img/shared/select_arrow.svg" alt="arrow"> </a>
+            <a href="" class="btn-filter" data-toggle="modal" data-target="#filter-btn-2" data-dismiss="modal">Hersteller  <img src="img/shared/select_arrow.svg" alt="arrow"> </a>
+            <a href="" class="btn-filter" data-toggle="modal" data-target="#filter-btn-1" data-dismiss="modal">Beschwerden <img src="img/shared/select_arrow.svg" alt="arrow"> </a>
+            <a href="" class="btn-filter" data-toggle="modal" data-target="#filter-btn-2" data-dismiss="modal">Hersteller  <img src="img/shared/select_arrow.svg" alt="arrow"> </a>
+            <a href="" class="btn-filter" data-toggle="modal" data-target="#filter-btn-3" data-dismiss="modal">Verordnung  <img src="img/shared/select_arrow.svg" alt="arrow"> </a>                        
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>          
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/libs.min.js"></script>
   <script src="js/main.js"></script>

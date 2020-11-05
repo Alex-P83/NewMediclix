@@ -1,14 +1,21 @@
-.top-header {
-  &.home-apotheke-page {
-    min-height: 755px;
-    background: url("../img/content/home-apotheke/home_apotheke_bg.svg")
-      no-repeat top right;
-  }
-}
-
 .main_home-apotheke-screen {
-  margin-top: 140px;
+  min-height: 755px;
+  position: relative;
+  margin-top: -103px;
+  padding-bottom: 30px;
+  img{
+    position: absolute;
+    top:0;
+    right:0;
+    max-width: 100%;
+    &.mobile-img{
+      display: none;
+    }
+  }  
   .title {
+    position: relative;
+    z-index: 1;
+    margin-top: 245px;    
     h1 {
       span {
         font-weight: 300;
@@ -17,6 +24,8 @@
     margin-bottom: 20px;
   }
   a {
+    position: relative;
+    z-index: 1;
     padding: 0.375rem 3.75rem;
   }
 }
@@ -382,29 +391,29 @@
 }
 
 @include respond(s-screen) {
-  .top-header {
-    &.home-apotheke-page {
-      background-size: 100%;
-      min-height: auto;
-      padding-bottom: 30px;
-    }
-  }
+  .main_home-apotheke-screen {
+    min-height: auto;
+  } 
 }
 
 @include respond(es-screen) {
-  .top-header {
-    &.home-apotheke-page {
-      background: url("../img/content/home-apotheke/home_apotheke_bg_mobile.svg")
-        no-repeat top right;
-      background-size: 100%;
-    }
-  }
   .main_home-apotheke-screen {
-    margin-top: 250px;
     text-align: center;
+    img{
+      position: relative;
+      max-width: none;
+      width: 100%;
+      &.desktop-img{
+        display: none;
+      }
+      &.mobile-img{
+        display: block;
+      }
+    }
     .title {
       text-align: center;
       margin-bottom: 29px;
+      margin-top: 20px;
     }
   }
   .customer_satisfaction {
