@@ -1,152 +1,283 @@
 .modal {
-    &-content {
-        padding: 50px;
+  &-dialog {
+    max-width: 865px;
+    padding: 25px;
+  }
+  &-content {
+    padding: 50px;
+    border-radius: 10px;
+    border: none;
+  }
+  &-header {
+    padding: 0;
+    border-bottom: 2px solid color(light-grey, light-100);
+    margin-bottom: 25px;
+    h2 {
+      padding-bottom: 35px;
     }
-    &-header{
-        padding: 0;
-        border-bottom: 2px solid color(light-grey,light-100);
-        margin-bottom: 25px;
-        h2{
-            padding-bottom: 35px;
+    .close {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: color(light-grey, light-100);
+      opacity: 1;
+      position: absolute;
+      top: -25px;
+      right: -25px;
+      padding: 0;
+      margin: 0;
+      outline: none;
+      svg {
+        use {
+          fill: #000;
         }
-        .close{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 64px;
-            height: 64px;
-            border-radius: 50%;
-            background: color(light-grey,light-100);
-            opacity: 1;
+      }
+      &:not(:disabled):not(.disabled) {
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &-body {
+    padding: 0;
+    form {
+      input[type="text"] {
+        background: url("../img/shared/search.svg") no-repeat center left 18px,
+          color(light-grey, light-100);
+        border: none;
+        width: 100%;
+        padding-left: 44px;
+        color: color(dark-grey, primary);
+        margin-bottom: 40px;
+        &::-webkit-input-placeholder {
+          color: color(dark-grey, primary);
+        }
+
+        &::-moz-placeholder {
+          color: color(dark-grey, primary);
+        }
+
+        /* Firefox 19+ */
+        &:-moz-placeholder {
+          color: color(dark-grey, primary);
+        }
+
+        /* Firefox 18- */
+        &:-ms-input-placeholder {
+          color: color(dark-grey, primary);
+        }
+      }
+      .check-list {
+        display: flex;
+        flex-wrap: wrap;
+        overflow: auto;
+        .label-field {
+          width: calc(100% / 3);
+          margin: 9px 0;
+        }
+        input {
+          display: none;
+          &:checked + label {
+            font-weight: 700;
+            &:before {
+              background: color(green, primary);
+              border-color: color(green, primary);
+              content: url("../img/shared/check.svg");
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+          }
+        }
+        label {
+          position: relative;
+          font-size: 20px;
+          font-weight: 400;
+          color: color(dark-grey, primary);
+          padding-left: 45px;
+          cursor: pointer;
+          margin: 0;
+          &:before {
             position: absolute;
-            top:-25px;
-            right:-25px;
-            padding: 0;
-            margin: 0;
-            outline: none;
-            svg{
-                use{
-                    fill:#000;
-                }
-            }
-            &:not(:disabled):not(.disabled){
-                &:hover{
-                   opacity: 1; 
-                }
-            } 
-        }
-    }
-    &-body{
-        padding: 0;
-        form{
-            input[type="text"]{
-                background:url('img/shared/search.svg') no-repeat center left 18px, color(light-grey,light-100);
-                border: none;
-                width: 100%;
-                padding-left: 44px;
-                color: color(dark-grey, primary);
-                margin-bottom: 40px;
-                &::-webkit-input-placeholder {
-                    color: color(dark-grey, primary);
-                  }
-                
-                  &::-moz-placeholder {
-                    color: color(dark-grey, primary);
-                  }
-                
-                  /* Firefox 19+ */
-                  &:-moz-placeholder {
-                    color: color(dark-grey, primary);
-                  }
-                
-                  /* Firefox 18- */
-                  &:-ms-input-placeholder {
-                    color: color(dark-grey, primary);
-                  }                 
-            }
-            .check-list{
-                display: flex;
-                flex-wrap: wrap;
-                .label-field{
-                    width: calc(100% / 3);
-                    margin:9px 0;
-                }
-                input{
-                    display: none;
-                    &:checked + label {
-                        font-weight: 700;
-                        &:before{
-                            background: color(green,primary);
-                            border-color: color(green,primary);
-                            content: url('../img/check.svg');
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                        }
-                    }
-                }
-                label{
-                    position: relative;
-                    font-size: 20px;
-                    font-weight: 400;
-                    color: color(dark-grey,primary);
-                    padding-left: 45px;
-                    cursor: pointer;
-                    margin:0;
-                    &:before{
-                        position: absolute;
-                        top:50%;
-                        transform: translateY(-50%);
-                        left:0;
-                        width: 28px;
-                        height: 28px;
-                        border-radius: 5px;
-                        background: color(white,primary);
-                        border:1px solid color(light-grey,primary);
-                        content:''; 
-                    }
-                }
-            }
-            .wrap-btn{
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                margin-top: 50px;
-                button{
-                    width:calc(50% - 22px);
-                }
-            }
-        }
-    }
-    &.filter-modal{
-        .modal-dialog {
-            max-width: 865px;
-        }
-    }
-    &.all-filter-modal{
-        .filter_list {
-            display: flex;
-            flex-wrap: wrap;
-            margin-left: -15px;
-            margin-right: -15px;
-            a {
-            width: calc(100% / 3 - 30px);
-            height: 48px;
-            padding: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border:1px solid color(light-grey,primary);
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            width: 28px;
+            height: 28px;
             border-radius: 5px;
-            text-decoration: none;
-            margin:5px 15px;
-            font-size: 16px;
-            font-weight: 400;
-            color:color(dark-grey,primary);
-            img{
-                margin-left: 5px;
-            }
-            }
-          }        
+            background: color(white, primary);
+            border: 1px solid color(light-grey, primary);
+            content: "";
+          }
+        }
+      }
+      .wrap-btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 50px;
+        button {
+          width: calc(50% - 22px);
+        }
+      }
     }
+  }
+  &.all-filter-modal {
+    .filter_list {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -15px;
+      margin-right: -15px;
+      a {
+        width: calc(100% / 3 - 30px);
+        height: 48px;
+        padding: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid color(light-grey, primary);
+        border-radius: 5px;
+        text-decoration: none;
+        margin: 5px 15px;
+        font-size: 16px;
+        font-weight: 400;
+        color: color(dark-grey, primary);
+        img {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+  &.modal-menu {
+    .modal-body {
+      .inner_menu_list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -15px;
+        margin-right: -15px;
+        a {
+          width: calc(100% / 3 - 30px);
+          height: 48px;
+          padding: 14px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 1px solid #c4c4c4;
+          border-radius: 5px;
+          text-decoration: none;
+          margin: 5px 15px;
+          font-size: 16px;
+          font-weight: 400;
+          color: #575966;
+        }
+      }
+    }
+  }
+}
+
+@include respond(s-screen) {
+  .modal {
+    &.all-filter-modal {
+      .filter_list {
+        a {
+          width: calc(100% / 2 - 30px);
+        }
+      }
+    }
+    &.filter-modal {
+      .modal-body {
+        form {
+          .check-list {
+            max-height: 300px;
+            .label-field {
+              width: calc(100% / 2);
+            }
+          }
+        }
+      }
+    }
+    &.modal-menu {
+      .modal-body {
+        .inner_menu_list {
+          a {
+            width: calc(100% / 2 - 30px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@include respond(es-screen) {
+  .modal {
+    &-dialog {
+      padding: 15px;
+    }
+    &-content {
+      padding: 20px;
+    }
+    &-header {
+      h2 {
+        padding-bottom: 15px;
+      }
+      .close {
+        width: 46px;
+        height: 46px;
+        top: -15px;
+        right: -15px;
+        svg {
+          width: 12px;
+          height: 12px;
+        }
+      }
+    }
+    &.all-filter-modal {
+      .filter_list {
+        margin: 0;
+        a {
+          width: 100%;
+          margin: 5px 0;
+        }
+      }
+    }
+    &.filter-modal {
+      .modal-body {
+        form {
+          .check-list {
+            .label-field {
+              width: 100%;
+            }
+          }
+          .wrap-btn {
+            margin-left: -20px;
+            margin-right: -20px;
+            margin-bottom: -20px;
+            button {
+              width: 50%;
+              border-radius: 0;
+              &.btn-secondary {
+                border-bottom-left-radius: 10px;
+              }
+              &.btn-primary {
+                border-bottom-right-radius: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.modal-menu {
+      .modal-body {
+        .inner_menu_list {
+          a {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
 }
