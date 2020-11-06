@@ -46,7 +46,7 @@
     padding: 0;
     form {
       input[type="text"] {
-        background: url("../img/shared/search.svg") no-repeat center left 18px,
+        background: url("/img/shared/search.svg") no-repeat center left 18px,
           color(light-grey, light-100);
         border: none;
         width: 100%;
@@ -86,7 +86,7 @@
             &:before {
               background: color(green, primary);
               border-color: color(green, primary);
-              content: url("../img/shared/check.svg");
+              content: url("/img/shared/check.svg");
               display: flex;
               align-items: center;
               justify-content: center;

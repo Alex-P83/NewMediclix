@@ -24,21 +24,28 @@
       margin: 15px 0;
       padding: 15px 0;
       h4 {
-        margin-bottom: 8px;
+        margin-bottom: 0x;
       }
       .address {
         font-size: 16px;
         line-height: 1.2;
         font-weight: 400;
-        margin: 0;
+        margin-bottom: 5px;
       }
       .time {
         font-size: 16px;
         line-height: 1.2;
         font-weight: 400;
-        margin: 0;
-        color: color(green, primary);
-      }
+        margin-bottom: 5px;
+
+        &.opened {
+            color: color(green, primary);
+        }
+
+        &.closed {
+            color: color(light-grey, primary);
+        }
+    }
     }
     .tile_action {
       .field {

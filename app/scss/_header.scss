@@ -88,8 +88,72 @@ header{
                     }
                 }
             }
-            .login{
-                width: 110px;
+            .entrance{
+                .user_block{
+                    position: relative;
+                    .user{
+                        svg{
+                            use{
+                                fill:color(white,primary);
+                            }
+                        }
+                    }
+                    .dropdown-content {
+                        display: none;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        z-index: 1;
+                        margin-top: 40px;
+                        &:after {
+                          position: absolute;
+                          height: 40px;
+                          width: 40px;
+                          content: "";
+                          top: -40px;
+                          right: 0px;
+                        }
+                        .inner-content {
+                          background: color(white, primary);
+                          @include box_shadow(3);
+                          padding: 12px 0;
+                          border-radius: 8px;
+                          display: flex;
+                          flex-direction: column;
+                          a {
+                            display: flex;
+                            align-items: flex-start;
+                            padding: 12px 24px;
+                            text-decoration: none;
+                            transition: 0.2s;
+                            align-items: center;
+                            font-weight: 16px;
+                            font-weight: 400;
+                            color:color(dark-grey,primary);
+                            .icon{
+                              width: 20px;
+                              height: 20px;
+                              display: flex;
+                              align-items: center;
+                              justify-content: center;
+                              margin-right: 14px;
+                            }
+                            &:hover{
+                                background: color(white,dark-100);
+                            }  
+                          }
+                        }
+                      }                    
+                      &:hover {
+                        cursor: pointer;
+                        .dropdown-content {
+                          display: block;
+                        }
+                      }                                         
+                }
+                .login{
+                    width: 110px;
+                }                
             }
             .menu-btn{
                 display: none;
@@ -136,7 +200,7 @@ header{
                 .menu{
                     display: none;
                 }
-                .login{
+                .entrance{
                     display: none;
                 }
                 .menu-btn{

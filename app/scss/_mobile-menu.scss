@@ -79,7 +79,50 @@
       }
     }
   }
+  .user_block{
+    border-top: 1px solid color(white,dark-100);
+    border-bottom: 1px solid color(white,dark-100);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    .user{
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+     font-size: 18px;
+      svg{
+        margin-right: 10px;
+      }
+    }
+    ul{
+      padding: 0;
+      li{
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        margin: 0;
+        padding: 5px 0;
+        a{
+          display: flex;
+          align-items: center;
+          font-size: 16px;
+          .icon{
+            width: 25px;
+            display: inline-flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            margin-right:10px;
+          }
+        }
+        transition: 0.2s;
+        &:hover{
+          background: color(white,dark-100);
+        }        
+      }
+    }
+  }
   .login{
     width: 100%;
+    margin-top: 30px;
   }
 }
