@@ -63,7 +63,7 @@ gulp.task('browser-sync', function() {
   });
 });
 
-gulp.task('export', function(){
+gulp.task('export', function(done){
   let buildHtml = gulp.src('app/**/*.html')
     .pipe(gulp.dest('dist'));
 
@@ -77,7 +77,8 @@ gulp.task('export', function(){
     .pipe(gulp.dest('dist/fonts'));
 
   let BuildImg = gulp.src('app/img/**/*.*')
-    .pipe(gulp.dest('dist/img'));   
+    .pipe(gulp.dest('dist/img'));
+    done();   
 });
 
 gulp.task('watch', function(){

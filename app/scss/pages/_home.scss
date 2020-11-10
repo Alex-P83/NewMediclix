@@ -23,42 +23,57 @@
     }
     margin-bottom: 40px;
   }
-  form {
+  form#searchForm {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: start;
     justify-content: flex-start;
     position: relative;
     z-index: 1;
-    input {
-      width: 100%;
-      max-width: 290px;
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-      padding-left: 40px;
-      background: url("../img/shared/marker.svg") no-repeat left 10px center,
-        color(white, primary);
-        &.invisible {
-          height: 0;
-          min-height: 0;
-          max-height: 0;
-          width: 0;
-          min-width: 0;
-          max-width: 0;
-          border: 0 !important;
-          padding: 0;
-      }
+
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+
+        input {
+            width: 100%;
+            max-width: 290px;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            padding-left: 40px;
+            background: url("/img/shared/marker.svg") no-repeat left 10px center, color(white, primary);
+
+            &.invisible {
+                height: 0;
+                min-height: 0;
+                max-height: 0;
+                width: 0;
+                min-width: 0;
+                max-width: 0;
+                border: 0 !important;
+                padding: 0;
+            }
+        }
+
+        button {
+            width: 100%;
+            max-width: 137px;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            transition: 0.3s;
+
+            &:hover {
+                background: color(green, dark-100);
+            }
+        }
+
+        .field-validation-error {
+            color: color(red, primary);
+        }
     }
-    button {
-      width: 100%;
-      max-width: 137px;
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-      transition: 0.3s;
-      &:hover {
-        background: color(green, dark-100);
-      }
-    }
-  }
+}
 }
 
 .convenient_order {

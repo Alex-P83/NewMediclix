@@ -166,10 +166,22 @@
                 <h1 class="h-bold">Mediclix: Deine lokale<br> Online-Apotheke<br>
                 <span> Apotheke finden und<br> Medikamente vorbestellen.</span></h1>                
             </div>
-            <form action="">
-                <input type="text" placeholder="Ort eingeben">
-                <button>Suchen</button>
-            </form>
+            <form id="searchForm" action="" method="post">
+                        <div>
+                            <input
+                                   type="text"  name="Address"
+                                   placeholder="Ort eingeben"/>
+                            <button type="submit">Suchen</button>
+                        </div>
+                        <div>
+                            <span  class="address error-message"></span>
+                            <input type="text" id="cityName"
+                                   class="invisible"
+                                   name="cityName" value="" required/>
+                            <input type="hidden" id="cityLat" name="Lat" value=""/>
+                            <input type="hidden" id="cityLng" name="Lng" value=""/>
+                        </div>
+                    </form>            
         </div>
   </section>        
   <!-- Сonvenient order  -->

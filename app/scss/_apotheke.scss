@@ -23,30 +23,39 @@
     .info {
       margin: 15px 0;
       padding: 15px 0;
+
       h4 {
-        margin-bottom: 0x;
+          margin-bottom: 8px;
       }
+
+      .rating__stars {
+          margin-top: 10px;
+          margin-bottom: 15px;
+          margin-left: -2px;
+      }
+
       .address {
-        font-size: 16px;
-        line-height: 1.2;
-        font-weight: 400;
-        margin-bottom: 5px;
+          font-size: 16px;
+          line-height: 1.4;
+          font-weight: 400;
+          margin-bottom: 0.4rem;
       }
+
       .time {
-        font-size: 16px;
-        line-height: 1.2;
-        font-weight: 400;
-        margin-bottom: 5px;
+          font-size: 16px;
+          line-height: 1.4;
+          font-weight: 400;
+          margin-bottom: 0.4rem;
 
-        &.opened {
-            color: color(green, primary);
-        }
+          &.opened {
+              color: color(green, primary);
+          }
 
-        &.closed {
-            color: color(light-grey, primary);
-        }
-    }
-    }
+          &.closed {
+              color: color(light-grey, primary);
+          }
+      }
+  }
     .tile_action {
       .field {
         display: flex;
